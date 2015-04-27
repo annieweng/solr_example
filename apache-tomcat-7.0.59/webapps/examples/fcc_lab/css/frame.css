@@ -1,0 +1,70 @@
+
+body {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    color: #000 !important;
+}
+#displayOptionWrapper, #alertBar, #nav, #hdr, #fcc_carousel_container, #sidebar, #block-menu-primary-links, .sideftr, .tabs, .block-fcc_calendar .optionsPanelGroup, .block-fcc_calendar .date_nav_left, .block-fcc_calendar .date_nav_right, .block-fcc_calendar .calendarview, #edoc_titlebar h2, #edoc_titlebar ul, .edoc_content #expandToolbar {
+    display: none !important;
+}
+#printlogo {
+    display: block;
+    margin: 10px 20px;
+}
+.breadcrumb {
+    text-align: right !important;
+}
+.breadcrumb, .breadcrumb a:link, .breadcrumb a:visited, #maincontent a:link, #maincontent a:visited {
+    color: #000 !important;
+    font-family: Verdana,Arial,Helvetica,sans-serif !important;
+}
+h1 {
+    border-top: 1px solid #000 !important;
+    color: #000 !important;
+    font-family: Verdana,Arial,Helvetica,sans-serif !important;
+}
+#maincontent h2, #maincontent h3, #maincontent h4, #maincontent h5, #maincontent h6 {
+    color: #000 !important;
+    font-family: Verdana,Arial,Helvetica,sans-serif !important;
+}
+#contentcontainer {
+    margin: 0 !important;
+}
+#maincontent {
+    padding-bottom: 0 !important;
+}
+#footer {
+    margin: 0 !important;
+}
+#footer .left {
+    width: 100% !important;
+}
+#footer .right {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    margin-top: 10px !important;
+    padding: 10px 0 20px !important;
+    width: 100% !important;
+}
+.content-container, .withsidebar .content-container {
+    width: 100% !important;
+}
+.block-fcc_calendar, .block-fcc_calendar form, .block-fcc_calendar .date_navigation {
+    margin: 0 auto 10px !important;
+    padding: 0 !important;
+}
+.block-fcc_calendar .eventcalendar, .block-fcc_calendar .date_navigation {
+    width: 640px !important;
+}
+#edoc_titlebar {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    filter: none !important;
+}
+#edoc_date {
+    color: #000 !important;
+}
+.edoc_content {
+    border-bottom: medium none !important;
+    border-left: medium none !important;
+    border-right: medium none !important;
+    height: auto !important;
+    overflow: visible !important;
+}

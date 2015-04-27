@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+<title>Electronic Comment Filing System | FCC.gov</title>
+<meta name="viewport" content="width=device-width, minimum-scale=0.5, user-scalable=yes, target-densitydpi=device-dpi"/> 	
+<link type="text/css" rel="stylesheet" media="all" href="css/content.css" />
+<link type="text/css" rel="stylesheet" media="all" href="js/jquery-ui-1.11.2/jquery-ui.min.css" />
+<link type="text/css" rel="stylesheet" media="all" href="css/lab-search.css" />
+<link type="text/css" rel="stylesheet" media="print" href="css/frame.css" />
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link type="text/css" rel="stylesheet" media="all" href="js/dojo-1.10.2/dijit/themes/claro/claro.css" />
+<link type="text/css" rel="stylesheet" media="all" href="js/dojo-1.10.2/dojox/grid/enhanced/resources/claro/EnhancedGrid.css" />
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.11.2/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-drupal.js"></script>
+<script type='text/javascript' src='js/dojo-1.10.2/dojo/dojo.js'></script>
+<script type="text/javascript" src="js/results_grid.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(document).ready(function() {
+
+});
+
+//--><!]]>
+</script>
+</head>
+<body>
+	<div id="heading">
+		<div id="heading-title"><div id='heading_start'>FCC</div><div id="logo" class="seal"></div><div id='heading_end'>LAB</div></div>
+	</div>
+	<div id="search">
+		<div id="search_term">
+			<div id="box_wrapper">
+				<label for="searchbox">SOLR SEARCH</label>
+				<input id="searchbox" class="form-text" type="text" title="Enter the terms you wish to search for." value="" name="search_theme_form" maxlength="128">
+				<input id="searchsubmit" class="form-submit" type="image" src="images/btnSearch.jpg" alt="Search" value="Search" name="submit" onclick='submitSearch();'>
+			</div>
+
+		</div>
+		<div id="results">
+			<div id='dojo_grid' align="right">
+				<p style="visibility:hidden;display:none" id='warning'></p>
+				<div id="resultsGridDiv" class="claro"></div>
+			</div>
+			<div id='no_results'>&nbsp;</div>
+		</div>
+	</div>
+
+</body>
+</html>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	/*var search_term = $.jStorage.get("searchTerm");
+
+	quickSearchSwitch(search_type);
+	window.setTimeout(hovertipInit, 1);
+	
+	var auto_open = true;
+	
+	if(search_term){
+		$("#searchbox").val();
+		auto_open = false;
+	}
+	else
+		search_term = "";*/
+	$("#searchbox").focus();
+	
+	$('body').keypress(function(e) {
+		if (e.keyCode == '13') {
+			submitSearch();
+		}
+	});
+});
+
+/*dojo.addOnLoad(function(){
+	require(["dijit/Tooltip", "dojo/domReady!"], function(Tooltip){
+		new Tooltip({
+			id: "activity_tooltip",
+			connectId: "info-anchor",
+			label: "<legend>Details:</legend><p class='paragraph-style'>Displayed are the proceeding numbers, submission types, and states<br>with the highest volume of ECFS submissions associated with your<br>current search criteria. Also displayed are the totals for brief comments. <br>Clicking on a link will filter the results table below.</p>"
+		});
+	});
+});*/
+
+var counter = 0; 
+var wait_interval;
+var waiting_msg = "<span class='value-cool'>Awaiting search criteria to retreive results. <br>Please enter a search term</span>";
+
+function intervalStart() {
+	wait_interval = setInterval(function () {myTimer()}, 1400);
+}
+
+function myTimer() {
+	counter ++;
+	if(counter < 4)
+		$("#no_results p").append(".");
+	else{
+		window.clearInterval(wait_interval);
+		counter = 0;
+		
+		window.setTimeout(function () { //clear dots and start over
+			$('#no_results p').empty().append(waiting_msg);
+			intervalStart();
+		}, 1800);
+	}
+		
+	if ($('#resultsGrid').is(":visible")){
+		window.clearInterval(wait_interval);
+		counter = 0;
+	}
+}
+
+var viewer_displayed = false;
+	
+//var results_url  = 'https://' + getHost() + '/queryservice/results/' + msg + '?callback=?';
+
+
+function submitSearch(){
+	var results_url = 'p024616:8983/solr/all/select?wt=json&callback=?';
+	$('#warning').empty();
+	//console.log(search_type);
+	if($("#searchbox").val() && $("#searchbox").val() != ""){
+		$('#no_results').empty();
+		$('#no_results').append("<p><span class='value-cool'>Loading...</span></p>");
+		console.log(results_url + "&q=" + $("#searchbox").val());
+		displayResults(results_url + "&q=" + $("#searchbox").val());
+	}
+	else{
+		$('#no_results').empty().append("<p>" + waiting_msg + "</p>");
+		intervalStart();
+	}
+}
+
+function ajaxCall(url, type, async, cache){
+	var results = 
+		$.ajax({
+			async: async, 
+			cache: cache, 
+			url: url,
+			dataType: type
+		});
+		
+		//$.getJSON(url);
+	console.log(results);
+	console.log(JSON.parse(results.response));
+	return JSON.parse(results.response);
+}
+
+function displayResults(results_url) {
+	var start_time = new Date().getTime();
+	var max_recs = getMaxRecords();
+	var check_time = getCheckTime();
+	
+	var results = ajaxCall(results_url, 'json', false, true);
+	//console.log(results.length);
+	if(results.length >= max_recs){
+		$('#warning').empty().append("<label>** Only displaying " + max_recs + " of 600 records.  Please refine your search.</label>");
+	}
+	
+	if(results.length != 0){								
+		dojo.ready(function(){
+			//console.log(results);
+			jsonHandler(results);
+			$('#no_results').hide();
+			if ($('#results').is(":hidden")){
+				$('#results').show();
+				dijit.byId("resultsGrid")._refresh();
+			}
+			//viewer_displayed = true;
+			/*filtering();*/
+		});
+	}
+	else if(results.metadata.totalCount == 0){	
+		$('#no_results').empty().append('<label>No results found.</label>');
+	}
+
+	
+	/*$.getJSON(results_url, function(response) {
+		task_json=self.setInterval(function() {
+			var timer = new Date().getTime() - start_time;
+			console.log(timer + " secs");
+			if(timer > getWaitTime()){
+				self.clearInterval(task_json); //stops interval
+				$('#no_results').empty().append('<label>Request timeout: Taking too long to retrieve results.</label>');
+				return; //breaks loop and returns message
+			}
+			
+			// Results logic start.
+			
+			$.getJSON(results_url, function(response) {
+				console.log(response);
+				if(response){
+					if(response.metadata.queryStatus == "DONE"){
+						self.clearInterval(task_json);
+						if(response.metadata.totalCount >= max_recs){
+							$('#warning').empty().append("<label>** Only displaying " + max_recs + " of " + response.metadata.totalCount + " records.  Please refine your search.</label>");
+						}
+						if(response.metadata.totalCount != 0){								
+							dojo.ready(function(){
+								jsonHandler(response);
+								$('#no_results').hide();
+								if ($('#results').is(":hidden")){
+									$('#results').show();
+									dijit.byId("resultsGrid")._refresh();
+								}
+								viewer_displayed = true;
+								filtering();
+							});
+							
+							dojo.addOnLoad(function() {
+							   dojo.connect(window, "onresize", resizeGrid("resultsGrid");
+							});
+						}
+						else if(response.metadata.totalCount == 0){	
+							$('#no_results').empty().append('<label>No results found.</label>');
+						}
+					}
+					else{
+						console.log("not done querying: " + timer + "+ timer + " secs");
+					}
+				}
+			})
+			.fail(function() {
+				$('#no_results').empty().append('<label>This query could not be submitted.</label>');
+				self.clearInterval(task_json);
+			});
+			
+			// Results logic end.
+			
+		},check_time); 	
+	
+	});	*/
+}
+
+
+
+</script>

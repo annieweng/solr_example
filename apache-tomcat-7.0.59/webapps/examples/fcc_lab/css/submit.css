@@ -1,0 +1,153 @@
+.content-container{
+	background: #fff !important;
+}
+
+/*
+.main-table-view input{
+	margin-bottom: 8px;
+}
+
+input[type="radio"]{
+	margin-bottom: 8px;
+}*/
+
+fieldset{
+	border:1px solid #555 !important;
+	background: none repeat scroll 0 0 #E9EFF5 !important;
+}
+
+.standardset{
+	height: 260px;
+}
+
+.docset{
+	height: 100px;
+}
+
+.detailset{
+	min-height: 150px !important;
+	height:0 !important;
+}
+
+.quickset{
+	min-height: 180px !important;
+	height:0 !important;
+}
+
+legend{
+	color: #1d4d66;
+	line-height: 1.3em;
+	font-size: 110%;
+    font-weight: bold;
+	z-index: 1;
+	/*background: #E9EFF5;*/
+	background: #fff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fff 16%, #E9EFF5 105%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(16%,#fff), color-stop(105%,#E9EFF5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 16%,#E9EFF5; 105%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top,  #fff 16%,#E9EFF5 105%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#E9EFF5',GradientType=0 ); /* IE6-9 */
+
+}
+
+fieldset label{
+	font-size: 88%;
+	font-weight: bold;
+}
+
+.small_set{
+	width: 37%;
+}
+.large_set{
+	width: 63%;
+}
+.field-table-view{
+	width:100%;
+	display:table;
+}
+.row{
+	display:table-row;
+	position:relative;  
+	width: 100%;
+	clear: both;
+}
+.one{
+	width: 100%;
+}
+
+.two{
+	width: 49%;
+}
+.two_halves{
+	width:46%;
+	text-align: center;
+}
+.cell{
+	display:table-cell;
+	position:relative;
+	margin-bottom: 8px;
+	word-wrap: break-word;
+}
+
+.content-container select{
+	width: 92%;
+	clear: left; 
+	background: #fff;
+	border-top: 1px solid silver;
+	border-left: 1px solid #E5E4E2;
+	height: 23px;
+	font: 10pt/180% Verdana,Arial,Helvetica,sans-serif !important;
+	padding: 0 !important;
+}
+
+.full{
+	width: 100% !important;
+}
+
+.full select{
+	width: 97% !important;
+}
+
+#proceedings_selector{
+ width:140px;
+ height:65px;
+
+}
+.align-bottom{
+	bottom:0;
+	margin-top: 24px;
+}
+
+.large_box{
+	width:90%;
+}
+.med_box{
+	width:50%;
+}
+
+.small_box{
+	width:25%;
+}
+
+.custom_desc{
+	resize:none; 
+	width:94%;
+}
+
+#table_docAdd tr{
+	margin-bottom: 4px;
+}
+/*
+#criteria_input p{
+	font-weight: bold;
+}	
+
+.three{
+	min-width: 30%;
+	max-width: 41%;
+}
+
+fieldset hr{
+margin: 4em 0 1em 0 !important;
+}
+*/

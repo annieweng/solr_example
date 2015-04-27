@@ -1,0 +1,202 @@
+INFO  - 2015-03-12 20:00:04.372; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2015-03-12 20:00:04.430; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /u03/solr/solr-5.0.0/server/contexts at interval 0
+INFO  - 2015-03-12 20:00:04.446; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /u03/solr/solr-5.0.0/server/contexts/solr-jetty-context.xml
+INFO  - 2015-03-12 20:00:04.575; org.eclipse.jetty.webapp.WebInfConfiguration; Extract jar:file:/u03/solr/solr-5.0.0/server/webapps/solr.war!/ to /u03/solr/solr-5.0.0/server/solr-webapp/webapp
+INFO  - 2015-03-12 20:00:07.673; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2015-03-12 20:00:07.804; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()WebAppClassLoader=857642591@331e965f
+INFO  - 2015-03-12 20:00:07.856; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2015-03-12 20:00:07.857; org.apache.solr.core.SolrResourceLoader; using system property solr.solr.home: /u03/solr/solr-5.0.0/server/solr
+INFO  - 2015-03-12 20:00:07.857; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/u03/solr/solr-5.0.0/server/solr/'
+INFO  - 2015-03-12 20:00:08.085; org.apache.solr.core.ConfigSolr; Loading container configuration from /u03/solr/solr-5.0.0/server/solr/solr.xml
+INFO  - 2015-03-12 20:00:08.411; org.apache.solr.core.CorePropertiesLocator; Config-defined core root directory: /u03/solr/solr-5.0.0/server/solr
+INFO  - 2015-03-12 20:00:08.427; org.apache.solr.core.CoreContainer; New CoreContainer 203423778
+INFO  - 2015-03-12 20:00:08.429; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=/u03/solr/solr-5.0.0/server/solr/]
+INFO  - 2015-03-12 20:00:08.455; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 600000
+INFO  - 2015-03-12 20:00:08.456; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: null
+INFO  - 2015-03-12 20:00:08.461; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 60000
+INFO  - 2015-03-12 20:00:08.464; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2015-03-12 20:00:08.465; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnections to: 10000
+INFO  - 2015-03-12 20:00:08.465; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2015-03-12 20:00:08.465; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2015-03-12 20:00:08.466; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2015-03-12 20:00:08.466; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2015-03-12 20:00:08.466; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2015-03-12 20:00:08.467; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting useRetries to: false
+INFO  - 2015-03-12 20:00:08.848; org.apache.solr.update.UpdateShardHandler; Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+INFO  - 2015-03-12 20:00:08.852; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2015-03-12 20:00:08.854; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2015-03-12 20:00:08.857; org.apache.solr.core.CoreContainer; Host Name: 
+INFO  - 2015-03-12 20:00:08.940; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /u03/solr/solr-5.0.0/server/solr
+INFO  - 2015-03-12 20:00:08.957; org.apache.solr.core.CorePropertiesLocator; Found 0 core definitions
+INFO  - 2015-03-12 20:00:08.959; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/u03/solr/solr-5.0.0/server
+INFO  - 2015-03-12 20:00:08.959; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2015-03-12 20:00:09.014; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2015-03-12 20:08:55.320; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=71 
+INFO  - 2015-03-12 20:08:55.396; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=3 
+INFO  - 2015-03-12 20:08:55.408; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={action=STATUS&core=FCC_LAB&wt=json} status=0 QTime=4 
+INFO  - 2015-03-12 20:08:55.900; org.apache.solr.handler.admin.CoreAdminHandler; core create command instanceDir=FCC_LAB&name=FCC_LAB&action=CREATE&wt=json
+INFO  - 2015-03-12 20:08:55.911; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/u03/solr/solr-5.0.0/server/solr/FCC_LAB/'
+INFO  - 2015-03-12 20:08:56.077; org.apache.solr.core.SolrConfig; current version of requestparams : 0
+INFO  - 2015-03-12 20:08:56.098; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2015-03-12 20:08:56.103; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2015-03-12 20:08:56.104; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2015-03-12 20:08:56.104; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.105; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2015-03-12 20:08:56.105; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2015-03-12 20:08:56.106; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.107; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2015-03-12 20:08:56.107; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2015-03-12 20:08:56.108; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2015-03-12 20:08:56.108; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2015-03-12 20:08:56.109; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2015-03-12 20:08:56.109; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.110; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2015-03-12 20:08:56.110; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/jhighlight-1.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.111; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.111; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2015-03-12 20:08:56.112; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2015-03-12 20:08:56.112; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2015-03-12 20:08:56.113; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2015-03-12 20:08:56.114; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2015-03-12 20:08:56.114; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2015-03-12 20:08:56.115; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2015-03-12 20:08:56.115; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.116; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2015-03-12 20:08:56.116; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2015-03-12 20:08:56.117; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2015-03-12 20:08:56.117; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2015-03-12 20:08:56.118; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2015-03-12 20:08:56.118; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2015-03-12 20:08:56.119; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2015-03-12 20:08:56.119; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2015-03-12 20:08:56.120; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.120; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2015-03-12 20:08:56.121; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2015-03-12 20:08:56.131; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/dist/solr-cell-5.0.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.133; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2015-03-12 20:08:56.133; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.134; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2015-03-12 20:08:56.135; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2015-03-12 20:08:56.135; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2015-03-12 20:08:56.136; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.136; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2015-03-12 20:08:56.137; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2015-03-12 20:08:56.139; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/dist/solr-clustering-5.0.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.140; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2015-03-12 20:08:56.141; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2015-03-12 20:08:56.143; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/dist/solr-langid-5.0.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.144; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2015-03-12 20:08:56.145; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2015-03-12 20:08:56.145; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2015-03-12 20:08:56.146; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2015-03-12 20:08:56.148; org.apache.solr.core.SolrResourceLoader; Adding 'file:/u03/solr/solr-5.0.0/dist/solr-velocity-5.0.0.jar' to classloader
+INFO  - 2015-03-12 20:08:57.754; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.0.0
+INFO  - 2015-03-12 20:08:57.970; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2015-03-12 20:08:57.992; org.apache.solr.schema.IndexSchema; Reading Solr Schema from /u03/solr/solr-5.0.0/server/solr/FCC_LAB/conf/managed-schema
+INFO  - 2015-03-12 20:08:58.170; org.apache.solr.schema.IndexSchema; [FCC_LAB] Schema name=example-data-driven-schema
+INFO  - 2015-03-12 20:08:59.213; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2015-03-12 20:08:59.362; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-03-12 20:08:59.378; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-03-12 20:08:59.638; org.apache.solr.core.CoreContainer; Creating SolrCore 'FCC_LAB' using configuration from instancedir /u03/solr/solr-5.0.0/server/solr/FCC_LAB/
+INFO  - 2015-03-12 20:08:59.639; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2015-03-12 20:08:59.654; org.apache.solr.core.SolrCore; [FCC_LAB] Opening new SolrCore at /u03/solr/solr-5.0.0/server/solr/FCC_LAB/, dataDir=/u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/
+INFO  - 2015-03-12 20:08:59.677; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2015-03-12 20:08:59.686; org.apache.solr.core.SolrCore; [FCC_LAB] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2015-03-12 20:08:59.686; org.apache.solr.core.SolrCore; [FCC_LAB] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2015-03-12 20:08:59.720; org.apache.solr.core.CachingDirectoryFactory; return new directory for /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data
+INFO  - 2015-03-12 20:08:59.743; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index/
+WARN  - 2015-03-12 20:08:59.744; org.apache.solr.core.SolrCore; [FCC_LAB] Solr index directory '/u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index' doesn't exist. Creating new index...
+INFO  - 2015-03-12 20:08:59.765; org.apache.solr.core.CachingDirectoryFactory; return new directory for /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index
+INFO  - 2015-03-12 20:08:59.967; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@35d2c3c6; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2015-03-12 20:08:59.968; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2015-03-12 20:08:59.977; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2015-03-12 20:08:59.978; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2015-03-12 20:08:59.979; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2015-03-12 20:08:59.986; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2015-03-12 20:08:59.987; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2015-03-12 20:09:00.186; org.apache.solr.update.processor.UpdateRequestProcessorChain; creating updateRequestProcessorChain "add-unknown-fields-to-the-schema"
+INFO  - 2015-03-12 20:09:00.337; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2015-03-12 20:09:00.354; org.apache.solr.core.RequestHandlers; created /update: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-03-12 20:09:00.355; org.apache.solr.core.RequestHandlers; created /update/json: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-03-12 20:09:00.356; org.apache.solr.core.RequestHandlers; created /update/csv: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-03-12 20:09:00.356; org.apache.solr.core.RequestHandlers; created /update/json/docs: org.apache.solr.handler.UpdateRequestHandler
+INFO  - 2015-03-12 20:09:00.358; org.apache.solr.core.RequestHandlers; created /config: org.apache.solr.handler.SolrConfigHandler
+INFO  - 2015-03-12 20:09:00.359; org.apache.solr.core.RequestHandlers; created /schema: org.apache.solr.handler.SchemaHandler
+INFO  - 2015-03-12 20:09:00.376; org.apache.solr.core.RequestHandlers; created /replication: org.apache.solr.handler.ReplicationHandler
+INFO  - 2015-03-12 20:09:00.378; org.apache.solr.core.RequestHandlers; created /get: org.apache.solr.handler.RealTimeGetHandler
+INFO  - 2015-03-12 20:09:00.380; org.apache.solr.core.RequestHandlers; created /admin/luke: org.apache.solr.handler.admin.LukeRequestHandler
+INFO  - 2015-03-12 20:09:00.382; org.apache.solr.core.RequestHandlers; created /admin/system: org.apache.solr.handler.admin.SystemInfoHandler
+INFO  - 2015-03-12 20:09:00.383; org.apache.solr.core.RequestHandlers; created /admin/mbeans: org.apache.solr.handler.admin.SolrInfoMBeanHandler
+INFO  - 2015-03-12 20:09:00.384; org.apache.solr.core.RequestHandlers; created /admin/plugins: org.apache.solr.handler.admin.PluginInfoHandler
+INFO  - 2015-03-12 20:09:00.385; org.apache.solr.core.RequestHandlers; created /admin/threads: org.apache.solr.handler.admin.ThreadDumpHandler
+INFO  - 2015-03-12 20:09:00.386; org.apache.solr.core.RequestHandlers; created /admin/properties: org.apache.solr.handler.admin.PropertiesRequestHandler
+INFO  - 2015-03-12 20:09:00.387; org.apache.solr.core.RequestHandlers; created /admin/logging: org.apache.solr.handler.admin.LoggingHandler
+INFO  - 2015-03-12 20:09:00.389; org.apache.solr.core.RequestHandlers; created /admin/file: org.apache.solr.handler.admin.ShowFileRequestHandler
+INFO  - 2015-03-12 20:09:00.390; org.apache.solr.core.RequestHandlers; created /admin/ping: org.apache.solr.handler.PingRequestHandler
+INFO  - 2015-03-12 20:09:00.399; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.399; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.400; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.401; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2015-03-12 20:09:00.401; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2015-03-12 20:09:00.402; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2015-03-12 20:09:00.402; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2015-03-12 20:09:00.403; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2015-03-12 20:09:00.403; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2015-03-12 20:09:00.407; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2015-03-12 20:09:00.408; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.408; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.409; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.409; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.410; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.410; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.410; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.411; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2015-03-12 20:09:00.457; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-03-12 20:09:00.461; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-03-12 20:09:00.463; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-03-12 20:09:00.465; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-03-12 20:09:00.473; org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2015-03-12 20:09:00.529; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2015-03-12 20:09:00.529; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2015-03-12 20:09:00.542; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@35d2c3c6; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2015-03-12 20:09:00.543; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2015-03-12 20:09:00.566; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@10bbf022[FCC_LAB] main
+INFO  - 2015-03-12 20:09:00.580; org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: /u03/solr/solr-5.0.0/server/solr/FCC_LAB/conf
+INFO  - 2015-03-12 20:09:00.580; org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {storageDir=/u03/solr/solr-5.0.0/server/solr/FCC_LAB/conf}
+INFO  - 2015-03-12 20:09:00.599; org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using file:dir=/u03/solr/solr-5.0.0/server/solr/FCC_LAB/conf
+INFO  - 2015-03-12 20:09:00.600; org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2015-03-12 20:09:00.600; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2015-03-12 20:09:00.615; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2015-03-12 20:09:00.629; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2015-03-12 20:09:00.633; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /u03/solr/solr-5.0.0/server/solr/FCC_LAB/conf/elevate.xml
+INFO  - 2015-03-12 20:09:00.683; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2015-03-12 20:09:00.688; org.apache.solr.core.CoreContainer; registering core: FCC_LAB
+INFO  - 2015-03-12 20:09:00.691; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@10bbf022[FCC_LAB] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-03-12 20:09:00.693; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2015-03-12 20:09:00.693; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2015-03-12 20:09:00.694; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2015-03-12 20:09:00.694; org.apache.solr.core.SolrCore; [FCC_LAB] Registered new searcher Searcher@10bbf022[FCC_LAB] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-03-12 20:09:00.697; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={instanceDir=FCC_LAB&name=FCC_LAB&action=CREATE&wt=json} status=0 QTime=4797 
+INFO  - 2015-03-12 20:10:19.255; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=6 
+INFO  - 2015-03-12 20:10:19.303; org.apache.solr.core.SolrCore; [FCC_LAB]  CLOSING SolrCore org.apache.solr.core.SolrCore@1b3db0b2
+INFO  - 2015-03-12 20:10:19.304; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0,transaction_logs_total_size=0,transaction_logs_total_number=0}
+INFO  - 2015-03-12 20:10:19.304; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2015-03-12 20:10:19.304; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2015-03-12 20:10:19.305; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2015-03-12 20:10:19.312; org.apache.solr.core.SolrCore; [FCC_LAB] Closing main searcher on request.
+INFO  - 2015-03-12 20:10:19.313; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2015-03-12 20:10:19.314; org.apache.solr.core.CachingDirectoryFactory; looking to close /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data [CachedDir<<refCount=0;path=/u03/solr/solr-5.0.0/server/solr/FCC_LAB/data;done=false>>]
+INFO  - 2015-03-12 20:10:19.314; org.apache.solr.core.CachingDirectoryFactory; looking to close /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index [CachedDir<<refCount=0;path=/u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index;done=false>>, CachedDir<<refCount=0;path=/u03/solr/solr-5.0.0/server/solr/FCC_LAB/data;done=false>>]
+INFO  - 2015-03-12 20:10:19.314; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index
+INFO  - 2015-03-12 20:10:19.315; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data
+INFO  - 2015-03-12 20:10:19.315; org.apache.solr.core.CachingDirectoryFactory; looking to close /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data []
+INFO  - 2015-03-12 20:10:19.315; org.apache.solr.core.CachingDirectoryFactory; Removing directory after core close: /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data/index
+INFO  - 2015-03-12 20:10:19.322; org.apache.solr.core.CachingDirectoryFactory; Removing directory after core close: /u03/solr/solr-5.0.0/server/solr/FCC_LAB/data
+INFO  - 2015-03-12 20:10:19.330; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={deleteInstanceDir=true&action=UNLOAD&core=FCC_LAB&deleteIndex=true&wt=json&deleteDataDir=true} status=0 QTime=28 
+INFO  - 2015-03-12 20:16:44.273; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=11 
+INFO  - 2015-03-12 20:17:26.869; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2015-03-12 20:17:26.869; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/u03/solr/solr-5.0.0/server/solr-webapp/webapp/},/u03/solr/solr-5.0.0/server/webapps/solr.war
+INFO  - 2015-03-12 20:17:27.871; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=203423778
+INFO  - 2015-03-12 20:17:27.875; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/u03/solr/solr-5.0.0/server/solr-webapp/webapp/},/u03/solr/solr-5.0.0/server/webapps/solr.war

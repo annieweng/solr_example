@@ -1,0 +1,903 @@
+INFO  - 2015-04-23 14:16:40.043; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2015-04-23 14:16:40.073; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\contexts at interval 0
+INFO  - 2015-04-23 14:16:40.083; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\contexts\solr-jetty-context.xml
+INFO  - 2015-04-23 14:16:42.133; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2015-04-23 14:16:42.243; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()WebAppClassLoader=1284507144@4c900608
+INFO  - 2015-04-23 14:16:42.263; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2015-04-23 14:16:42.263; org.apache.solr.core.SolrResourceLoader; using system property solr.solr.home: D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr
+INFO  - 2015-04-23 14:16:42.263; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\'
+INFO  - 2015-04-23 14:16:42.423; org.apache.solr.core.ConfigSolr; Loading container configuration from D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\solr.xml
+INFO  - 2015-04-23 14:16:42.503; org.apache.solr.core.CorePropertiesLocator; Config-defined core root directory: D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr
+INFO  - 2015-04-23 14:16:42.503; org.apache.solr.core.CoreContainer; New CoreContainer 2052119949
+INFO  - 2015-04-23 14:16:42.503; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\]
+INFO  - 2015-04-23 14:16:42.523; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 600000
+INFO  - 2015-04-23 14:16:42.523; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: null
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 60000
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnections to: 10000
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2015-04-23 14:16:42.533; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting useRetries to: false
+INFO  - 2015-04-23 14:16:42.673; org.apache.solr.update.UpdateShardHandler; Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+INFO  - 2015-04-23 14:16:42.683; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2015-04-23 14:16:42.683; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2015-04-23 14:16:42.683; org.apache.solr.core.CoreContainer; Host Name: 
+INFO  - 2015-04-23 14:16:42.693; org.apache.solr.cloud.SolrZkServer; STARTING EMBEDDED STANDALONE ZOOKEEPER SERVER at port 9983
+INFO  - 2015-04-23 14:16:43.193; org.apache.solr.core.ZkContainer; Zookeeper client=localhost:9983
+INFO  - 2015-04-23 14:16:43.223; org.apache.solr.common.cloud.ConnectionManager; Waiting for client to connect to ZooKeeper
+INFO  - 2015-04-23 14:16:43.353; org.apache.solr.common.cloud.ConnectionManager; Watcher org.apache.solr.common.cloud.ConnectionManager@5ea1a89c name:ZooKeeperConnection Watcher:localhost:9983 got event WatchedEvent state:SyncConnected type:None path:null path:null type:None
+INFO  - 2015-04-23 14:16:43.353; org.apache.solr.common.cloud.ConnectionManager; Client is connected to ZooKeeper
+INFO  - 2015-04-23 14:16:43.423; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/queue
+INFO  - 2015-04-23 14:16:43.863; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/collection-queue-work
+INFO  - 2015-04-23 14:16:44.323; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/collection-map-running
+INFO  - 2015-04-23 14:16:44.393; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/collection-map-completed
+INFO  - 2015-04-23 14:16:44.443; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/collection-map-failure
+INFO  - 2015-04-23 14:16:44.483; org.apache.solr.common.cloud.SolrZkClient; makePath: /live_nodes
+INFO  - 2015-04-23 14:16:44.513; org.apache.solr.cloud.ZkController; Register node as live in ZooKeeper:/live_nodes/10.1.3.42:8983_solr
+INFO  - 2015-04-23 14:16:44.533; org.apache.solr.common.cloud.SolrZkClient; makePath: /live_nodes/10.1.3.42:8983_solr
+INFO  - 2015-04-23 14:16:44.563; org.apache.solr.common.cloud.SolrZkClient; makePath: /collections
+INFO  - 2015-04-23 14:16:44.593; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer_elect
+INFO  - 2015-04-23 14:16:44.623; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer_elect/election
+INFO  - 2015-04-23 14:16:44.663; org.apache.solr.cloud.Overseer; Overseer (id=null) closing
+INFO  - 2015-04-23 14:16:44.713; org.apache.solr.cloud.OverseerElectionContext; I am going to be the leader 10.1.3.42:8983_solr
+INFO  - 2015-04-23 14:16:44.713; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer_elect/leader
+INFO  - 2015-04-23 14:16:44.753; org.apache.solr.cloud.Overseer; Overseer (id=93703281231986688-10.1.3.42:8983_solr-n_0000000000) starting
+INFO  - 2015-04-23 14:16:44.843; org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/queue-work
+INFO  - 2015-04-23 14:16:45.063; org.apache.solr.cloud.OverseerAutoReplicaFailoverThread; Starting OverseerAutoReplicaFailoverThread autoReplicaFailoverWorkLoopDelay=10000 autoReplicaFailoverWaitAfterExpiration=30000 autoReplicaFailoverBadNodeExpiration=60000
+INFO  - 2015-04-23 14:16:45.083; org.apache.solr.cloud.OverseerCollectionProcessor; Process current queue of collection creations
+INFO  - 2015-04-23 14:16:45.083; org.apache.solr.common.cloud.SolrZkClient; makePath: /clusterstate.json
+INFO  - 2015-04-23 14:16:45.113; org.apache.solr.common.cloud.SolrZkClient; makePath: /aliases.json
+INFO  - 2015-04-23 14:16:45.133; org.apache.solr.common.cloud.ZkStateReader; Updating cluster state from ZooKeeper... 
+INFO  - 2015-04-23 14:16:45.143; org.apache.solr.cloud.Overseer$ClusterStateUpdater; Starting to work on the main queue
+INFO  - 2015-04-23 14:16:45.163; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr
+INFO  - 2015-04-23 14:16:45.183; org.apache.solr.core.CorePropertiesLocator; Found core FCC_DOCS_shard1_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_DOCS_shard1_replica1\
+INFO  - 2015-04-23 14:16:45.183; org.apache.solr.core.CorePropertiesLocator; Found core FCC_DOCS_shard2_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_DOCS_shard2_replica1\
+INFO  - 2015-04-23 14:16:45.183; org.apache.solr.core.CorePropertiesLocator; Found core FCC_DOCS_shard3_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_DOCS_shard3_replica1\
+INFO  - 2015-04-23 14:16:45.183; org.apache.solr.core.CorePropertiesLocator; Found core FCC_DOCS_shard4_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_DOCS_shard4_replica1\
+INFO  - 2015-04-23 14:16:45.183; org.apache.solr.core.CorePropertiesLocator; Found core FCC_DOCS_shard5_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_DOCS_shard5_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard10_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard10_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard1_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard1_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard2_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard2_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard3_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard3_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard4_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard4_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard5_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard5_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard6_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard6_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard7_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard7_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard8_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard8_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found core FCC_SPADC_DB_shard9_replica1 in D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\FCC_SPADC_DB_shard9_replica1\
+INFO  - 2015-04-23 14:16:45.193; org.apache.solr.core.CorePropertiesLocator; Found 15 core definitions
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_DOCS_shard1_replica1 state=down collection=FCC_DOCS
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_DOCS_shard2_replica1 state=down collection=FCC_DOCS
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_DOCS_shard4_replica1 state=down collection=FCC_DOCS
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_DOCS_shard3_replica1 state=down collection=FCC_DOCS
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard10_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard2_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard1_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard4_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard5_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_DOCS_shard5_replica1 state=down collection=FCC_DOCS
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard6_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.203; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard7_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.213; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard3_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.213; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard8_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.213; org.apache.solr.cloud.ZkController; publishing core=FCC_SPADC_DB_shard9_replica1 state=down collection=FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.233; org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-04-23 14:16:45.233; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_DOCS_shard1_replica1
+INFO  - 2015-04-23 14:16:45.263; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_DOCS_shard2_replica1
+INFO  - 2015-04-23 14:16:45.263; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_DOCS_shard4_replica1
+INFO  - 2015-04-23 14:16:45.263; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_DOCS_shard3_replica1
+INFO  - 2015-04-23 14:16:45.263; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard10_replica1
+INFO  - 2015-04-23 14:16:45.263; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard2_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard1_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard4_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard5_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_DOCS_shard5_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard6_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard7_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard3_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard8_replica1
+INFO  - 2015-04-23 14:16:45.273; org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for FCC_SPADC_DB_shard9_replica1
+INFO  - 2015-04-23 14:16:45.283; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 0, message = {
+  "operation":"state",
+  "core_node_name":"core_node4",
+  "numShards":"5",
+  "shard":"shard1",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard1_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 0
+INFO  - 2015-04-23 14:16:45.283; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=5 message={
+  "operation":"state",
+  "core_node_name":"core_node4",
+  "numShards":"5",
+  "shard":"shard1",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard1_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.283; org.apache.solr.cloud.overseer.ClusterStateMutator; building a new cName: FCC_DOCS
+INFO  - 2015-04-23 14:16:45.343; org.apache.solr.common.cloud.ZkStateReader$2; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/clusterstate.json, has occurred - updating... (live nodes size: 1)
+INFO  - 2015-04-23 14:16:45.403; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 14, message = {
+  "operation":"state",
+  "core_node_name":"core_node3",
+  "numShards":"5",
+  "shard":"shard2",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard2_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.403; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=5 message={
+  "operation":"state",
+  "core_node_name":"core_node3",
+  "numShards":"5",
+  "shard":"shard2",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard2_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.463; org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-04-23 14:16:45.473; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 14, message = {
+  "operation":"state",
+  "core_node_name":"core_node5",
+  "numShards":"5",
+  "shard":"shard4",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard4_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.473; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=5 message={
+  "operation":"state",
+  "core_node_name":"core_node5",
+  "numShards":"5",
+  "shard":"shard4",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard4_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.573; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 12, message = {
+  "operation":"state",
+  "core_node_name":"core_node2",
+  "numShards":"5",
+  "shard":"shard3",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard3_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.573; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=5 message={
+  "operation":"state",
+  "core_node_name":"core_node2",
+  "numShards":"5",
+  "shard":"shard3",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard3_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.643; org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-04-23 14:16:45.643; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 12, message = {
+  "operation":"state",
+  "core_node_name":"core_node6",
+  "numShards":"10",
+  "shard":"shard10",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard10_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.643; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node6",
+  "numShards":"10",
+  "shard":"shard10",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard10_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.643; org.apache.solr.cloud.overseer.ClusterStateMutator; building a new cName: FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:45.693; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 10, message = {
+  "operation":"state",
+  "core_node_name":"core_node3",
+  "numShards":"10",
+  "shard":"shard2",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard2_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.693; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node3",
+  "numShards":"10",
+  "shard":"shard2",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard2_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.763; org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-04-23 14:16:45.763; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 10, message = {
+  "operation":"state",
+  "core_node_name":"core_node7",
+  "numShards":"10",
+  "shard":"shard1",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard1_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.773; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node7",
+  "numShards":"10",
+  "shard":"shard1",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard1_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.833; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 8, message = {
+  "operation":"state",
+  "core_node_name":"core_node4",
+  "numShards":"10",
+  "shard":"shard4",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard4_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.833; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node4",
+  "numShards":"10",
+  "shard":"shard4",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard4_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.893; org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-04-23 14:16:45.893; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 8, message = {
+  "operation":"state",
+  "core_node_name":"core_node1",
+  "numShards":"10",
+  "shard":"shard5",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard5_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.893; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node1",
+  "numShards":"10",
+  "shard":"shard5",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard5_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:45.953; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 6, message = {
+  "operation":"state",
+  "core_node_name":"core_node1",
+  "numShards":"5",
+  "shard":"shard5",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard5_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:45.953; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=5 message={
+  "operation":"state",
+  "core_node_name":"core_node1",
+  "numShards":"5",
+  "shard":"shard5",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_DOCS_shard5_replica1",
+  "collection":"FCC_DOCS",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:46.013; org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-04-23 14:16:46.013; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 6, message = {
+  "operation":"state",
+  "core_node_name":"core_node2",
+  "numShards":"10",
+  "shard":"shard6",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard6_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:46.023; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node2",
+  "numShards":"10",
+  "shard":"shard6",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard6_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:46.073; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 4, message = {
+  "operation":"state",
+  "core_node_name":"core_node10",
+  "numShards":"10",
+  "shard":"shard7",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard7_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:46.073; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node10",
+  "numShards":"10",
+  "shard":"shard7",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard7_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:46.133; org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-04-23 14:16:46.133; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 4, message = {
+  "operation":"state",
+  "core_node_name":"core_node5",
+  "numShards":"10",
+  "shard":"shard3",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard3_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:46.133; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node5",
+  "numShards":"10",
+  "shard":"shard3",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard3_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:46.203; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 2, message = {
+  "operation":"state",
+  "core_node_name":"core_node8",
+  "numShards":"10",
+  "shard":"shard8",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard8_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:46.213; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node8",
+  "numShards":"10",
+  "shard":"shard8",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard8_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:46.253; org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-04-23 14:16:46.253; org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 2, message = {
+  "operation":"state",
+  "core_node_name":"core_node9",
+  "numShards":"10",
+  "shard":"shard9",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard9_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"} current state version: 1
+INFO  - 2015-04-23 14:16:46.263; org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=10 message={
+  "operation":"state",
+  "core_node_name":"core_node9",
+  "numShards":"10",
+  "shard":"shard9",
+  "roles":null,
+  "state":"down",
+  "core":"FCC_SPADC_DB_shard9_replica1",
+  "collection":"FCC_SPADC_DB",
+  "node_name":"10.1.3.42:8983_solr",
+  "base_url":"http://10.1.3.42:8983/solr"}
+INFO  - 2015-04-23 14:16:47.233; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.233; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.233; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.233; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Check for collection zkNode:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_DOCS
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Creating collection in ZooKeeper:FCC_SPADC_DB
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Looking for collection configName
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:47.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+INFO  - 2015-04-23 14:16:50.233; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:50.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+INFO  - 2015-04-23 14:16:53.233; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:53.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+INFO  - 2015-04-23 14:16:56.233; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:56.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+INFO  - 2015-04-23 14:16:59.233; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.263; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.273; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+INFO  - 2015-04-23 14:16:59.283; org.apache.solr.cloud.ZkController; Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+ERROR - 2015-04-23 14:17:02.233; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_DOCS
+ERROR - 2015-04-23 14:17:02.233; org.apache.solr.core.CoreContainer; Error creating core [FCC_DOCS_shard1_replica1]: Could not find configName for collection FCC_DOCS found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_DOCS found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_DOCS
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_DOCS
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_DOCS
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.core.CoreContainer; Error creating core [FCC_DOCS_shard3_replica1]: Could not find configName for collection FCC_DOCS found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_DOCS found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.core.CoreContainer; Error creating core [FCC_DOCS_shard2_replica1]: Could not find configName for collection FCC_DOCS found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_DOCS found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.core.CoreContainer; Error creating core [FCC_DOCS_shard4_replica1]: Could not find configName for collection FCC_DOCS found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_DOCS found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard10_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.263; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard2_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.273; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.273; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard4_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.273; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.273; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard7_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_DOCS
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.cloud.ZkController; Could not find configName for collection FCC_SPADC_DB
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard3_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.core.CoreContainer; Error creating core [FCC_DOCS_shard5_replica1]: Could not find configName for collection FCC_DOCS found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_DOCS found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard6_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard5_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard1_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard8_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+ERROR - 2015-04-23 14:17:02.283; org.apache.solr.core.CoreContainer; Error creating core [FCC_SPADC_DB_shard9_replica1]: Could not find configName for collection FCC_SPADC_DB found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection FCC_SPADC_DB found:null
+	at org.apache.solr.cloud.ZkController.getConfName(ZkController.java:1380)
+	at org.apache.solr.cloud.ZkController.createCollectionZkNode(ZkController.java:1306)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:36)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:511)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:278)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:272)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+INFO  - 2015-04-23 14:17:02.293; org.apache.solr.servlet.SolrDispatchFilter; user.dir=D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server
+INFO  - 2015-04-23 14:17:02.293; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2015-04-23 14:17:02.323; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2015-04-23 14:30:33.404; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799433366&since=0&wt=json} status=0 QTime=30 
+INFO  - 2015-04-23 14:30:43.444; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799443446&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:30:53.464; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799453464&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:31:03.484; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799463482&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:31:13.494; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799473491&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:31:23.504; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799483501&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:31:33.514; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799493511&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:31:43.524; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799503521&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:31:53.534; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799513531&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:32:03.544; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799523540&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:32:13.554; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799533550&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:32:23.564; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799543560&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:32:33.574; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799553570&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:32:43.584; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799563580&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:32:53.594; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799573590&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:33:03.614; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799583611&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:33:13.634; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799593629&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:33:23.644; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799603639&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:33:33.664; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799613658&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:33:43.674; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799623668&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:33:53.684; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799633678&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:34:03.694; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799643689&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:34:13.704; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799653697&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:34:23.714; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799663707&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:34:33.724; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799673718&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:34:43.734; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799683727&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:34:53.754; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799693747&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:35:03.774; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799703766&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:35:13.784; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799713776&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:35:23.794; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799723785&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:35:33.804; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799733798&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:35:43.824; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799743815&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:35:53.835; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799753829&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:36:03.855; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799763846&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:36:13.885; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799773865&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:36:23.905; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799783895&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:36:33.925; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799793915&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:36:43.935; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799803924&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:36:53.945; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799813933&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:37:03.955; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799823943&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:37:13.965; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799833953&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:37:23.975; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799843964&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:37:33.985; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799853973&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:37:43.995; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799863982&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:37:54.015; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799874002&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:38:04.025; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799884012&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:38:14.035; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799894022&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:38:24.055; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799904041&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:38:34.075; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799914061&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:38:44.095; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799924081&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:38:54.105; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799934092&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:39:04.125; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799944111&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:39:14.145; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799954131&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:39:24.165; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799964150&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:39:34.175; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799974160&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:39:44.185; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799984170&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:39:54.195; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429799994179&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:40:04.205; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800004189&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:40:14.215; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800014202&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:40:24.235; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800024218&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:40:34.245; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800034228&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:40:44.265; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800044249&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:40:54.285; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800054268&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:41:04.295; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800064278&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:41:14.305; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800074290&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:41:24.325; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800084308&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:41:34.335; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800094318&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:41:44.345; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800104326&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:41:54.355; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800114337&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:42:04.375; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800124356&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:42:14.395; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800134376&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:42:24.415; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800144396&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:42:34.435; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800154417&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:42:44.455; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800164435&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:42:54.465; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800174445&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:43:04.475; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800184454&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:43:14.485; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800194465&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:43:24.495; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800204474&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:43:34.505; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800214484&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:43:44.525; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800224504&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:43:54.535; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800234513&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:44:04.545; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800244523&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:44:14.565; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800254543&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:44:24.575; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800264553&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:44:34.595; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800274566&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:44:44.605; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800284582&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:44:54.615; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800294593&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:45:04.635; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800304612&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:45:14.645; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800314622&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:45:24.655; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800324631&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:45:34.665; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800334641&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:45:44.675; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800344651&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:45:54.685; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800354661&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:46:04.695; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800364671&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:46:14.705; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800374681&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:46:24.725; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800384700&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:46:34.735; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/logging params={_=1429800394709&since=1429798622283&wt=json} status=0 QTime=0 
+INFO  - 2015-04-23 14:46:41.805; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2015-04-23 14:46:41.805; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/D:/FCC_SOLR/FCC_BASELINE_P024616/u03/solr/solr-5.0.0/server/solr-webapp/webapp/},D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server/webapps/solr.war
+INFO  - 2015-04-23 14:46:42.805; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=2052119949
+INFO  - 2015-04-23 14:46:42.805; org.apache.solr.cloud.Overseer; Overseer (id=93703281231986688-10.1.3.42:8983_solr-n_0000000000) closing
+INFO  - 2015-04-23 14:46:42.805; org.apache.solr.cloud.Overseer$ClusterStateUpdater; Overseer Loop exiting : 10.1.3.42:8983_solr
+WARN  - 2015-04-23 14:46:42.845; org.apache.solr.common.cloud.ZkStateReader$3; ZooKeeper watch triggered, but Solr cannot talk to ZK
+WARN  - 2015-04-23 14:46:42.845; org.apache.zookeeper.server.ZooKeeperServerMain; Server interrupted
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1260)
+	at java.lang.Thread.join(Thread.java:1334)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.join(NIOServerCnxnFactory.java:302)
+	at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:114)
+	at org.apache.solr.cloud.SolrZkServer$1.run(SolrZkServer.java:121)
+INFO  - 2015-04-23 14:46:42.845; org.apache.solr.cloud.SolrZkServer$1; ZooKeeper Server exited.
+INFO  - 2015-04-23 14:46:42.855; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/D:/FCC_SOLR/FCC_BASELINE_P024616/u03/solr/solr-5.0.0/server/solr-webapp/webapp/},D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server/webapps/solr.war

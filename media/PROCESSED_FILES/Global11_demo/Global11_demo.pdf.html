@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="date" content="2013-02-04T14:35:32Z"/>
+<meta name="X-Parsed-By" content="org.apache.tika.parser.DefaultParser"/>
+<meta name="X-Parsed-By" content="org.apache.tika.parser.pdf.PDFParser"/>
+<meta name="creator" content="PSTOYANO"/>
+<meta name="xmp:CreatorTool" content="Microsoft® Office Word 2007"/>
+<meta name="meta:author" content="PSTOYANO"/>
+<meta name="meta:creation-date" content="2013-02-04T14:35:32Z"/>
+<meta name="created" content="Mon Feb 04 09:35:32 EST 2013"/>
+<meta name="dc:creator" content="PSTOYANO"/>
+<meta name="xmpTPg:NPages" content="8"/>
+<meta name="Creation-Date" content="2013-02-04T14:35:32Z"/>
+<meta name="resourceName" content="Global11_demo.pdf"/>
+<meta name="dcterms:created" content="2013-02-04T14:35:32Z"/>
+<meta name="Last-Modified" content="2013-02-04T14:35:32Z"/>
+<meta name="dcterms:modified" content="2013-02-04T14:35:32Z"/>
+<meta name="Last-Save-Date" content="2013-02-04T14:35:32Z"/>
+<meta name="meta:save-date" content="2013-02-04T14:35:32Z"/>
+<meta name="Author" content="PSTOYANO"/>
+<meta name="producer" content="Microsoft® Office Word 2007"/>
+<meta name="modified" content="2013-02-04T14:35:32Z"/>
+<meta name="Content-Length" content="709950"/>
+<meta name="Content-Type" content="application/pdf"/>
+<title>LESNET FOUO File</title>
+</head>
+<body><pre><hr><div class="page"><p/>
+<p>Global11 demo 
+</p>
+<p>This document describes how Global11_demo Data Modeler design was built. 
+</p>
+<p>I. Schema setup 
+</p>
+<p>Install global schema as it’s described here 
+</p>
+<p>http://www.oracle.com/technetwork/database/options/olap/global-11g-readme-082667.html 
+</p>
+<p>and using data here http://www.oracle.com/technetwork/database/enterprise-
+</p>
+<p>edition/downloads/global-11g-schema-1-128202.zip 
+</p>
+<p>Do not create analytic workspace. 
+</p>
+<p>Additional privileges need to be granted to used user for Oracle 12 c : 
+</p>
+<p>grant create view, create cube, create cube dimension, create cube measure folder to global; 
+</p>
+<p>Changes introduced to GLOBAL schema: 
+</p>
+<p>1) Two new columns added in UNITS_FACT table - to illustrate role playing dimensions 
+</p>
+<p>alter table global.units_fact add SHIP_MONTH_ID varchar2(7); 
+</p>
+<p>alter table global.units_fact add DELIVERY_MONTH_ID varchar2(7); 
+</p>
+<p>update  global.units_fact set SHIP_MONTH_ID = MONTH_ID; 
+</p>
+<p>update  global.units_fact set DELIVERY_MONTH_ID = MONTH_ID; 
+</p>
+<p>2) New table is created using following statement: 
+</p>
+<p>create table GLOBAL.cust_account AS 
+</p>
+<p>SELECT GLOBAL.CUSTOMER_DIM.SHIP_TO_ID, 
+</p>
+<p>  GLOBAL.CUSTOMER_DIM.SHIP_TO_DSC, 
+</p>
+<p>  GLOBAL.CUSTOMER_DIM.SHIP_TO_DSC_FRENCH, 
+</p>
+<p>  GLOBAL.CUSTOMER_DIM.SHIP_TO_DSC_DUTCH, 
+</p>
+<p>  GLOBAL.ACCOUNT.ACCOUNT_ID, 
+</p>
+<p>  GLOBAL.ACCOUNT.FIRSTNAME, 
+</p>
+<p>  GLOBAL.ACCOUNT.LASTNAME, 
+</p>
+<p>  GLOBAL.ACCOUNT.ADDRESS, 
+</p>
+<p>  GLOBAL.ACCOUNT.ADDRESS2, 
+</p>
+<p>  GLOBAL.ACCOUNT.CITY, </p>
+<p/>
+<div class="annotation"><a href="http://www.oracle.com/technetwork/database/options/olap/global-11g-readme-082667.html"/></div>
+<div class="annotation"><a href="http://www.oracle.com/technetwork/database/enterprise-edition/downloads/global-11g-schema-1-128202.zip"/></div>
+<div class="annotation"><a href="http://www.oracle.com/technetwork/database/enterprise-edition/downloads/global-11g-schema-1-128202.zip"/></div>
+</div>
+</hr>
+<hr><div class="page"><p/>
+<p>  GLOBAL.ACCOUNT.STATE_PROV, 
+</p>
+<p>  GLOBAL.ACCOUNT.COUNTRY, 
+</p>
+<p>  GLOBAL.ACCOUNT.ZIP_PC, 
+</p>
+<p>  GLOBAL.ACCOUNT.PHONE, 
+</p>
+<p>  GLOBAL.ACCOUNT.FAX, 
+</p>
+<p>  GLOBAL.ACCOUNT.EMAIL 
+</p>
+<p>FROM GLOBAL.CUSTOMER_DIM 
+</p>
+<p>INNER JOIN GLOBAL.ACCOUNT 
+</p>
+<p>ON GLOBAL.CUSTOMER_DIM.ACCOUNT_ID = GLOBAL.ACCOUNT.ACCOUNT_ID ; 
+</p>
+<p>3)  
+</p>
+<p>II. Building the design 
+</p>
+<p>1. Import Created schema (GLOBAL) 
+</p>
+<p>2. Engineer relational model to logical model 
+</p>
+<p>3. Create Dimensional model 
+</p>
+<p>4. Dimension is created using “New Dimension” icon on tool bar. Dimension can be set as time 
+</p>
+<p>dimension. Hierarchies in dimension are created in rollup manner connecting base level of 
+</p>
+<p>dimension (lowest granularity level) to dimension shape on diagram. Each sequence of levels 
+</p>
+<p>(starting from base level) constitutes a hierarchy belonging to that dimension. One level can 
+</p>
+<p>belong to several dimensions. 
+</p>
+<p>5. Hierarchy is created when dimension shape is connected (using “New Link”) to base level.  
+</p>
+<p> 
+</p>
+<p>Levels are connected (in level based hierarchies) using “New Link” tool. 
+</p>
+<p>6. Level – level entity need to be defined, and also – definition includes level key, descriptive 
+</p>
+<p>attributes and calculated attributes. Mapping of optional short description and long description 
+</p>
+<p>attributes can be defined and for level belonging to time dimension mapping of mandatory 
+</p>
+<p>‘time span” and “time end” attributes should be defined. </p>
+<p/>
+</div>
+</hr>
+<hr><div class="page"><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/2_19.png"/><p/>
+<p>7. Link – used to define hierarchies and dimension usage. Child to parent attributes can be defined 
+</p>
+<p>when link connects levels defined on different entities 
+</p>
+<p> 
+</p>
+<p>8. Value based hierarchy  - used level to define level key, parent key and descriptive attributes 
+</p>
+<p> 
+</p>
+<p>9. Ragged hierarchy – corresponds to skip level hierarchy in Oracle OLAP – use “New Ragged 
+</p>
+<p>Hierarchy Link” tool in order to mark and represent a “jump” over level(s) – dashed green link 
+</p>
+<p>below. 
+</p>
+<p> 
+</p>
+<p>Ragged hierarchy is exported to Oracle OLAP as ragged and “skip level” hierarchy. 
+</p>
+<p>10. Dimension usage (link between cube and dimension) – defines child to parent attributes (join of 
+</p>
+<p>fact entity to base level of dimension), whether it’s role playing dimension and other related </p>
+<p/>
+</div>
+</hr>
+<hr><div class="page"><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/3_22.png"/><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/3_23.png"/><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/3_24.png"/><p/>
+<p>properties 
+</p>
+<p> 
+</p>
+<p>11. Cube – fact entities, measures and pre-compute of the cube can be defined 
+</p>
+<p>pre-compute: 
+</p>
+<p>1) 
+</p>
+<p> 
+</p>
+<p>2) </p>
+<p/>
+</div>
+</hr>
+<hr><div class="page"><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/4_28.png"/><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/4_29.png"/><p/>
+<p> </p>
+<p>measures: 
+</p>
+<p> 
+</p>
+<p>12. Measure –  
+</p>
+<p>basic measure – mapped to attribute in fact entity </p>
+<p/>
+</div>
+</hr>
+<hr><div class="page"><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/5_32.png"/><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/5_33.png"/><p/>
+<p> </p>
+<p>summary levels for basic measure can be defined – not exported to Oracle OLAP 
+</p>
+<p> </p>
+<p/>
+</div>
+</hr>
+<hr><div class="page"><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/6_36.png"/><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/6_37.png"/><p/>
+<p>calculated measure 
+</p>
+<p> 
+</p>
+<p>13. Calculated attribute (level) 
+</p>
+<p> </p>
+<p/>
+</div>
+</hr>
+<hr><div class="page"><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/7_40.png"/><img src="http://localhost:8080/media/PROCESSED_FILES/Global11_demo/7_41.png"/><p/>
+<p>14. Export to Oracle AW 
+</p>
+<p> 
+if AW with given name exist it’ll be dropped first and then recreated, metadata will be exported 
+</p>
+<p>to file if file name is provided. Export to file only – still needs connection to Oracle database 
+</p>
+<p>because metadata are created but not committed to database. 
+</p>
+<p>“Default schema” can be set if there are objects in relational/physical model without schema 
+</p>
+<p>defined, if not set then schema from connection is used to resolve objects without schema in 
+</p>
+<p>the model. 
+</p>
+<p>Can be selected which cubes to be exported. 
+</p>
+<p>15.  </p>
+<p/>
+</div>
+</hr>
+</pre></body></html>

@@ -1,0 +1,2 @@
+rem curl http://localhost:8983/solr/TEST_DOC/update?commit=true -H "Content-Type: text/xml" --data-binary '<delete><query>*:*</query></delete>'
+java -jar dataImporter-1.5.jar --input-dir=D:\solr_example\media  --output_type=html  --web_url_prefix=http://localhost:8080 --collectionURL=http://localhost:8983/solr/TEST_DOC --extract-individual-to-destination=true  --UNIQ_ID=UNIQ_ID --webapp-root-folder=D:\solr_example\

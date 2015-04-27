@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="date" content="2014-05-26T08:22:00Z"/>
+<meta name="cp:revision" content="3"/>
+<meta name="Total-Time" content="68"/>
+<meta name="extended-properties:AppVersion" content="12.0000"/>
+<meta name="meta:paragraph-count" content="34"/>
+<meta name="meta:word-count" content="2607"/>
+<meta name="dc:creator" content="PSTOYANO"/>
+<meta name="extended-properties:Company" content="Oracle Corporation"/>
+<meta name="Word-Count" content="2607"/>
+<meta name="dcterms:created" content="2014-05-23T13:21:00Z"/>
+<meta name="meta:line-count" content="123"/>
+<meta name="Last-Modified" content="2014-05-26T08:22:00Z"/>
+<meta name="dcterms:modified" content="2014-05-26T08:22:00Z"/>
+<meta name="Last-Save-Date" content="2014-05-26T08:22:00Z"/>
+<meta name="meta:character-count" content="14866"/>
+<meta name="Template" content="Normal.dotm"/>
+<meta name="Line-Count" content="123"/>
+<meta name="Paragraph-Count" content="34"/>
+<meta name="meta:save-date" content="2014-05-26T08:22:00Z"/>
+<meta name="meta:character-count-with-spaces" content="17439"/>
+<meta name="Application-Name" content="Microsoft Office Word"/>
+<meta name="extended-properties:TotalTime" content="68"/>
+<meta name="modified" content="2014-05-26T08:22:00Z"/>
+<meta name="Content-Length" content="694152"/>
+<meta name="Content-Type" content="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+<meta name="X-Parsed-By" content="org.apache.tika.parser.DefaultParser"/>
+<meta name="X-Parsed-By" content="org.apache.tika.parser.microsoft.ooxml.OOXMLParser"/>
+<meta name="creator" content="PSTOYANO"/>
+<meta name="meta:author" content="PSTOYANO"/>
+<meta name="meta:creation-date" content="2014-05-23T13:21:00Z"/>
+<meta name="extended-properties:Application" content="Microsoft Office Word"/>
+<meta name="meta:last-author" content="PSTOYANO"/>
+<meta name="Creation-Date" content="2014-05-23T13:21:00Z"/>
+<meta name="xmpTPg:NPages" content="16"/>
+<meta name="resourceName" content="SQLDeveloperDataModelerScripting.docx"/>
+<meta name="Character-Count-With-Spaces" content="17439"/>
+<meta name="Last-Author" content="PSTOYANO"/>
+<meta name="Character Count" content="14866"/>
+<meta name="Page-Count" content="16"/>
+<meta name="Revision-Number" content="3"/>
+<meta name="Application-Version" content="12.0000"/>
+<meta name="extended-properties:Template" content="Normal.dotm"/>
+<meta name="Author" content="PSTOYANO"/>
+<meta name="publisher" content="Oracle Corporation"/>
+<meta name="meta:page-count" content="16"/>
+<meta name="dc:publisher" content="Oracle Corporation"/>
+<title>LESNET FOUO File</title>
+</head>
+<body><pre><p>XML metadata files are part of the product</p>
+<p>XML files in XML metadata directory ( datamodeler\datamodeler\xmlmetadata ) describe properties and structure of objects that can be created with Oracle SQL Developer Data Modeler UI or using scripting. They are used by Data Modeler (DM) in its functionality thus any changes introduced to them could break normal functionality of DM.</p>
+<p>Information described in XML files</p>
+<p>XML files follow internal object model used by DM and all properties of specific object can be found following parent class link. There is an HTML presentation of XML files in doc directory (use index.html) which allow faster navigation in class hierarchy – direct descendents of each class are also presented there. </p>
+<p><img src="embedded:image1.png" alt=""/></p>
+<p>Two important groups can be found in each XML file – properties and collections. They can be marked as external which means that property or collection is stored outside the file that represents the object. As example – Table has internal collection “columns” i.e. columns are stored in the file that represents table; RelationalDesign class (representing relational model) has external collection Tables. Design class (representing the whole design) has external property LogicalModel and external collection RelationalModels.</p>
+<p>Each property has getter and setter method defined that can be used to get property or set it using scripting. There are simple and complex properties. Simple properties (data types String, boolean, int, long…) are parts of persistence of the object. Complex properties can be contained (their persistence is part of persistence of the object) or referred - ID of referred object is stored in objects persistence though object is involved in setter and getter method:</p>
+<p>   &lt;property name="structuredType" dataType="oracle.dbtools.crest.model.design.datatypes.StructuredType" defaultValue="" xmlName="structuredType" relatedProperty="use" relatedValue="3" xmlType="element" getter="getStructuredType" setter="setStructuredType" reffered="true" search="true"/&gt;</p>
+<p/>
+<p>In some case simple String property holds object ID or list of object IDs – that’s related to dependencies between objects during loading – it’s possible that referred object(s) may not be loaded when that property is set.</p>
+<p>Property can be marked as searchable and thus can be used in search, custom reports and set common properties functionality. Some read only properties also are marked as searchable.</p>
+<p>Complex properties could have methods for creating them or nullifying them (example – listOfValues in ContainedObjectWithDomain) :</p>
+<p>   &lt;property name="listOfValues" dataType="oracle.dbtools.crest.model.design.constraint.ConstraintEnumeration" isPropertyMap="true" xmlName="listOfValues" xmlType="element" getter="getOwnValueList" setter="setOwnValueList" createPMap="createConstraintEnumeration" itemXmlName="valueDef" keyXmlName="value" valueXmlName="description" removeItem="clearOwnValueList"/&gt;</p>
+<p/>
+<p>So listOfvalues can be created using instance of Column or Attribute – here is an example (script is bound to logical model, gets entity by name, gets attribute by name, creates list of values if it’s not set for attribute, set it on attribute and adds two values with description; :</p>
+<p>ent = model.getEntitySet().getByName("PRODUCT INFORMATION");</p>
+<p>if(ent!=null){</p>
+<p>	attr = ent.getElementByName("PRODUCT STATUS");</p>
+<p>	if(attr!=null){</p>
+<p>		attr.setUseDomainConstraints(false);</p>
+<p>		ce = attr.getOwnValueList();</p>
+<p>		if(ce==null){</p>
+<p>			ce = attr.createConstraintEnumeration();</p>
+<p>			attr.setOwnValueList(ce);</p>
+<p>		}</p>
+<p>		// clear existing properties if need that</p>
+<p>		//ce.clearProperties();</p>
+<p>		ce.add("aaa","desc aaa");</p>
+<p>		ce.add("bbb","desc bbb");</p>
+<p>		attr.setDirty(true);</p>
+<p>	}</p>
+<p>}</p>
+<p>Collection definition provide createItem method that can be used to create item of that collection using instance of surrounding object – back to Tables collection we see that table can be created using model.createTable(). And columns collection in Table shows the method for creating column:</p>
+<p>col = table.createColumn();</p>
+<p>ModelObject is the root of the hierarchy and each model is also instance of DesignPart class.</p>
+<p>Changed object should be marked as changed using setDirty(true) method otherwise they won’t be saved during save operation.</p>
+<p>Each collection with type xxxxxSet (EntitySet – logModel.getEntitySet(),TableSet – relModel.getTableSet()) allows objects to be found by name ( method getByName(name) ) and by object ID (method getObjectByID(objectID) ). Collections for tables and views in relational model also allows object to be found by schema and name using method getBySchemaAndName(schema, name). Method iterator() can be used to iterate over objects or toArray() to get them in array. </p>
+<p>Each object has unique ID  (method getObjectID() ) that can be used to get the object using method of Design instance  – in scripting it’ll be model.getDesign().getDesignObject( ID )  - that doesn’t cover objects in physical models. Objects in relational and data types models have counterpart in physical model that has the same ID and can be found through instance of physical model (StorageDesign class) – for relational model – model.getStorageDesign().getStorageObject( ID ).</p>
+<p>Tables in physical model are in TableProxySet – there is a special method for getting table by schema name and table name due specific implementation of shemaObject in relational model and user that implements it in physical model - getBySchemaImplAndName(String schema, String name)  - model.getStorageDesign().getTableProxySet().getBySchemaImplAndName(schema, name)</p>
+<p>Setting data type for column and attribute </p>
+<p>Properties are described in ContainedObjectWithDomain.xml file.</p>
+<p>   &lt;property name="use" dataType="short" defaultValue="" xmlName="use" xmlType="element" getter="getUse" setter="setUse" reffered="false" presentationName="Data Type Kind"&gt;</p>
+<p>    &lt;codedEnum&gt;</p>
+<p>	 &lt;item code="0" value="Domain"/&gt;</p>
+<p>	 &lt;item code="1" value="Logical Type"/&gt;</p>
+<p>	 &lt;item code="2" value="Distinct Type"/&gt;</p>
+<p>	 &lt;item code="3" value="Structured Type"/&gt;</p>
+<p>	 &lt;item code="4" value="Collection type"/&gt;</p>
+<p>	&lt;/codedEnum&gt;</p>
+<p>   &lt;/property&gt;</p>
+<p>   &lt;property name="collectionType" dataType="oracle.dbtools.crest.model.design.datatypes.CollectionType" defaultValue="" xmlName="collectionType" relatedProperty="use" relatedValue="4" xmlType="element" getter="getCollectionType" setter="setCollectionType" reffered="true" search="true"/&gt;</p>
+<p>   &lt;property name="structuredType" dataType="oracle.dbtools.crest.model.design.datatypes.StructuredType" defaultValue="" xmlName="structuredType" relatedProperty="use" relatedValue="3" xmlType="element" getter="getStructuredType" setter="setStructuredType" reffered="true" search="true"/&gt;</p>
+<p>   &lt;property name="distinctType" dataType="oracle.dbtools.crest.model.design.datatypes.DistinctType" defaultValue="" xmlName="distinctType" relatedProperty="use" relatedValue="2" xmlType="element" getter="getDistinctType" setter="setDistinctType" reffered="true" search="true"/&gt;</p>
+<p>   &lt;property name="logicalDatatype" dataType="oracle.dbtools.crest.model.design.LogicalDatatype" defaultValue="LOGDT017" xmlName="logicalDatatype" relatedProperty="use" relatedValue="1" xmlType="element" getter="getLogicalDatatype" setter="setLogicalDatatype" reffered="true" search="true"/&gt;</p>
+<p>   &lt;property name="dataTypePrecision" dataType="java.lang.String" defaultValue="" xmlName="dataTypePrecision" xmlType="element" getter="getDataTypePrecision" setter="setDataTypePrecision" search="true" reffered="false"/&gt;</p>
+<p>   &lt;property name="dataTypeScale" dataType="java.lang.String" defaultValue="" xmlName="dataTypeScale" xmlType="element" getter="getDataTypeScale" setter="setDataTypeScale" search="true" reffered="false"/&gt;</p>
+<p>   &lt;property name="dataTypeSize" dataType="java.lang.String" defaultValue="" xmlName="dataTypeSize" xmlType="element" getter="getDataTypeSize" setter="setDataTypeSize" search="true" reffered="false"/&gt;</p>
+<p>   &lt;property name="domain" dataType="oracle.dbtools.crest.model.design.Domain" defaultValue="DOM3000004" xmlName="domain" relatedProperty="use" relatedValue="0" xmlType="element" getter="getDomain" setter="setDomain" reffered="true" search="true"/&gt;</p>
+<p>Data type can be set using logical data type, domain, structured type, collection type or distinct type. Setting needs two steps 1) setting “<b>use</b>” property with related value as it’s described in meta data; 2) setting related type – example for logical data type:</p>
+<p>column.setUse(1);</p>
+<p>column. setLogicalDatatype(ldt);</p>
+<p>Size or precision and scale can be set together with logical data type depending on data type presented – character or numeric. Size, precision and scale will be displayed on diagram and included in DDL only if they are enabled for logical data type set (Type administration)</p>
+<p><img src="embedded:image2.png" alt=""/></p>
+<p>Properties order of setting and additional processing</p>
+<p>Properties are processed by DM in order they are in XML metadata. Dependency is defined in case one property need to be processed before other property, also processing can be defined after properties are set. As example FKIndexAssociation – defines properties for foreign keys:</p>
+<p>   &lt;propertyDependency propDef="name" dependOnProperty="localFKIndex" /&gt;</p>
+<p>   &lt;processing afterInit="addToTable" /&gt;</p>
+<p>First definition defines that name of FK should be set after property localFK Index is set.</p>
+<p>And when all properties are set then method fk.addToTable() will be invoked.</p>
+<p>Well this describes how DM do processing when model is loaded. Otherwise here is an example how to create foreign key – Table2 has primary key PK_Table2 and column Col1 (in table1) match PK column in Table2:</p>
+<p>col1 = table1.getElementByName("Col1");  </p>
+<p>if(col1!=null){  </p>
+<p>    list = new java.util.ArrayList();  </p>
+<p>    list.add(col1);  </p>
+<p>    fk = table1.addForeignKey(PK_Table2,list);  </p>
+<p>    fk.setName("fk name goes here");  </p>
+<p>}  </p>
+<p>Transformation scripts</p>
+<p>Transformation script can be created using “Tools&gt;Design Rules&gt;Transformations” and then new script can be created – need to set name, execution engine (Mozilla Rhino for Javascript comes with JDK), and model to which scripts is bound – logical or relational. Variable that is initialized with related model is named <b>model</b> . In its simplest form transformation script can be written in script window, save and executed or debugged (for Javascript only).</p>
+<p>Changes made with the script cannot be undone, so it’s recommended that design to be saved before executing/debugging the script.</p>
+<p>Once defined scripts can be executed from context menu for relational and logical model in the browser (“Apply transformation scripts” in pop-up menu) – one or mere scripts can be executed at once:</p>
+<p><img src="embedded:image3.png" alt=""/></p>
+<p>Code reuse - libraries</p>
+<p>Libraries can be created in order code to be reused in different transformation scripts:</p>
+<p><img src="embedded:image4.png" alt=""/></p>
+<p>Library is defined with name, execution engine, list of functions that can be used in scripts or design rules and the code that defines functionality required.</p>
+<p>The code can be tested first in plain transformation script then can be moved in library for reuse. List of functions defines functions that can be used in definitions of transformation scripts and design rules. There is no parsing of the code so list of functions need to be created manually with names of functions that are defined in the code and can be used in transformations and rules.</p>
+<p>Transformation script with library</p>
+<p>DM comes with predefined scrip named “Tables to lower case – Rhino” – here is the code transformed to function in library – the code is surrounded by function definition</p>
+<p><img src="embedded:image5.png" alt=""/></p>
+<p>After code is transformed to function (lower_case) in library and function is defined in list of functions we can create transformation script that uses library:</p>
+<p><img src="embedded:image6.png" alt=""/></p>
+<p>Library needs to be selected and function from library that will be executed. Library code appears in script window but it cannot be edited and debugged.</p>
+<p>Custom Design rules</p>
+<p>Difference between transformation and design rule – design rule is bound to specific type of object (table, column, entity..) and is invoked for each object in the related model while transformation is invoked only once. Design rule should return true if it’s valid for processed object or false otherwise. Design rules also return to DM error type (in variable errType) and error message (in variable errMessage). Error type could be Error (red color), Warning (blue color) or something else set by customer (objects will be colored in yellow).  Design rule should not change the status if provided objects.</p>
+<p>Following is defined for custom rule – name of the rule, object type, execution engine, error type (warning or error – this can be changed in the script trough text set in errType variable). Variable field shows the name of variable that will be initialized with provided object. Also library and function from that library need to be selected. Library code is shown in “rule script” window but it’s not editable as it’s with transformation script based on library.</p>
+<p><img src="embedded:image7.png" alt=""/></p>
+<p>Usage of result from search functionality</p>
+<p>Objects appearing in search result are available using method getLastSearchResult() of model or physical model. Following code will cycle through all objects in search result:</p>
+<p>objs = model.getLastSearchResult().toArray();</p>
+<p>for(var i = 0;i&lt;objs.length;i++){</p>
+<p>	obj = objs[i];</p>
+<p>}</p>
+<p>DM 4.0.2 comes with transformation that creates subview from table in search result:</p>
+<p>objs = model.getLastSearchResult().toArray();</p>
+<p>var dp;</p>
+<p>var sv;</p>
+<p>//create subview and add tables to it</p>
+<p>for(var i = 0;i&lt;objs.length;i++){</p>
+<p>	obj = objs[i];</p>
+<p>	// use "Entity" for entities and logical model</p>
+<p>	if(obj.getObjectTypeName().equals("Table")){</p>
+<p>		if(dp==null){</p>
+<p>			dp = obj.getDesignPart();</p>
+<p>			sv = dp.createDesignPartSubView();</p>
+<p>			// uncomment next line if want to set name</p>
+<p>		     //sv.setName("Name");</p>
+<p>		     sv.getPlaceHolder().setVisible(true);</p>
+<p>		}</p>
+<p>		sv.addViewFor(obj);</p>
+<p>	}</p>
+<p>}</p>
+<p>if(dp!=null){</p>
+<p> //add foreign keys if you want to</p>
+<p> for(var i = 0;i&lt;objs.length;i++){</p>
+<p>	obj = objs[i];</p>
+<p>	// use "Entity" for entities and logical model</p>
+<p>	if(obj.getObjectTypeName().equals("Table")){</p>
+<p>		tv = obj.getFirstViewForDPV(sv);</p>
+<p>		if(tv!=null){</p>
+<p>			//for entities and logical model use </p>
+<p>			//tv.addTVRelations(); </p>
+<p>			tv.addTVFKRelations();</p>
+<p>		}</p>
+<p>	}</p>
+<p> }</p>
+<p> //add Arcs if you want to</p>
+<p> for(var i = 0;i&lt;objs.length;i++){</p>
+<p>	obj = objs[i];</p>
+<p>	if(obj.getObjectTypeName().equals("Table")){</p>
+<p>		tv = obj.getFirstViewForDPV(sv);</p>
+<p>		if(tv!=null){</p>
+<p>			tv.addArcs();</p>
+<p>		}</p>
+<p>	}</p>
+<p> }</p>
+<p> //arrange diagram</p>
+<p> sv.rearrangeNewDiagram();</p>
+<p>}</p>
+<p class="list_Paragraph">Objects in Subview</p>
+<pre>Subview is instance of Class DesignPartView and its descendants. Each table, view (class TableView), entity, view in logical model (class EntityView), foreign key (class FKIndexAssociation) and relationship (class Relation) has method <i>getFirstViewForDPV(dpv)</i></pre>
+<p>where  dpv is existing subview – here is code that will process only tables in specific subview:</p>
+<p>//get subview by name</p>
+<p> dpv = model.getSubViewByName(" the name of subview is here");</p>
+<p> if(dpv!=null){</p>
+<p>  tables = model.getTableSet().toArray();</p>
+<p>  for (var t = 0; t&lt;tables.length;t++){</p>
+<p>   table = tables[t];</p>
+<p>   //check for presentation in subview</p>
+<p>   tv = table.getFirstViewForDPV(dpv);</p>
+<p>   if(tv!=null){</p>
+<p>    // processing for table goes here</p>
+<p>Again using search functionality this can be done with less coding</p>
+<p class="list_Paragraph">Use search functionality – example is for entities in subview</p>
+<p>Entities and tables has read-only property usedInSubviews – below are pictures showing usage of that  property in Advanced search:</p>
+<p><img src="embedded:image8.png" alt=""/></p>
+<p/>
+<p><img src="embedded:image9.png" alt=""/></p>
+<p class="list_Paragraph">Use search result</p>
+<p>objs = model.getLastSearchResult().toArray();</p>
+<p>for(var i = 0;i&lt;objs.length;i++){</p>
+<p>	entity = objs[i];</p>
+<p>	// still can check if it's entity</p>
+<p>	if(obj.getObjectTypeName().equals("Entity")){</p>
+<p/>
+<p>Other examples</p>
+<p/>
+<p>XI.1 Entity template</p>
+<p>DM comes with transformation script called “Table template” which adds columns from table name “table_template” to all other tables in the model. Here is script that do the same for logical model and enmities there using entity named "entity_template" (transformation should be bound to logical model:</p>
+<p>var t_name = "entity_template";</p>
+<p>template = model.getEntitySet().getByName(t_name);</p>
+<p>if(template!=null){</p>
+<p>    tcolumns = template.getElements();</p>
+<p>    tables = model.getEntitySet().toArray();</p>
+<p>    for (var t = 0; t&lt;tables.length;t++){</p>
+<p>     table = tables[t];</p>
+<p>    // compare name ignoring the case</p>
+<p>     if(!table.getName().equalsIgnoreCase(t_name)){</p>
+<p>         for (var i = 0; i &lt; tcolumns.length; i++) {</p>
+<p>            column = tcolumns[i];</p>
+<p>            col = table.getElementByName(column.getName());</p>
+<p>            if(col==null){</p>
+<p>             col = table.createAttribute();</p>
+<p>            }</p>
+<p>            column.copy(col);</p>
+<p>            table.setDirty(true);</p>
+<p>         }</p>
+<p>     }</p>
+<p>    }</p>
+<p>}</p>
+<p>The script can be modified to be used together with search functionality – then different subset of entities can get different common attribute simply by changing template entity and using different search criteria.</p>
+<p/>
+<p/>
+<p>Though DM store design in set of directories and files, one can use scripting to store the whole design (or one model) into single file and to restore the status from such file:</p>
+<p>Saving:</p>
+<p>model.getAppView().getXMLTransformationManager().saveObjectWithExternals("D:/SVN_Local_files/handy_whole_des_big.xml",model.getDesign());</p>
+<p>Loading</p>
+<p>Since design will take the status as it’s stored in the file it’s good to be sure design is empty – method isEmpty() can be used for models (DesignPart class).</p>
+<p>model.getAppView().getXMLTransformationManager().loadObjectWithExternals("D:/SVN_Local_files/handy_whole_des_big.xml",model.getDesign());</p>
+<p>Note about physical models – only Oracle physical models are described in current revision of XML metadata thus non Oracle physical models cannot be saved into single file.</p>
+<p/>
+</pre></body></html>

@@ -1,0 +1,1 @@
+curl "http://localhost:8983/solr/admin/collections?action=CREATEALIAS&name=all&collections=TEST_DB,TEST_DOC"

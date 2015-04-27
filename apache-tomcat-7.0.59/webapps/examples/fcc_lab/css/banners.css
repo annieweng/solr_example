@@ -1,0 +1,23 @@
+.sectionbanner{
+    color: #042850;
+    font-weight: bold;
+    line-height: 2.2em;
+    min-height: 30px;
+	padding-left: 6px;
+}
+.content .optionbox {
+    background: white !important;
+    float: left;
+    margin-left: 16px;
+    padding: 8px;
+    width: 96%;
+}
+
+.content-container {
+    background: none repeat scroll 0 0 #e6e6e6 !important;
+}
+
+.sectionbanner td{
+	padding: 0 !important;
+	margin: 0 !important;
+}

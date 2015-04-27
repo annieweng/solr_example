@@ -1,0 +1,90 @@
+INFO  - 2015-04-23 14:47:02.838; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2015-04-23 14:47:02.858; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\contexts at interval 0
+INFO  - 2015-04-23 14:47:02.868; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\contexts\solr-jetty-context.xml
+INFO  - 2015-04-23 14:47:04.528; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2015-04-23 14:47:04.598; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()WebAppClassLoader=1721308783@6699166f
+INFO  - 2015-04-23 14:47:04.618; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2015-04-23 14:47:04.618; org.apache.solr.core.SolrResourceLoader; using system property solr.solr.home: D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr
+INFO  - 2015-04-23 14:47:04.618; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\'
+INFO  - 2015-04-23 14:47:04.778; org.apache.solr.core.ConfigSolr; Loading container configuration from D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\solr.xml
+INFO  - 2015-04-23 14:47:04.858; org.apache.solr.core.CorePropertiesLocator; Config-defined core root directory: D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr
+INFO  - 2015-04-23 14:47:04.868; org.apache.solr.core.CoreContainer; New CoreContainer 1523561590
+INFO  - 2015-04-23 14:47:04.868; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\]
+INFO  - 2015-04-23 14:47:04.878; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 600000
+INFO  - 2015-04-23 14:47:04.878; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: null
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 60000
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnections to: 10000
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2015-04-23 14:47:04.888; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting useRetries to: false
+INFO  - 2015-04-23 14:47:05.038; org.apache.solr.update.UpdateShardHandler; Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+INFO  - 2015-04-23 14:47:05.038; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2015-04-23 14:47:05.038; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2015-04-23 14:47:05.038; org.apache.solr.core.CoreContainer; Host Name: 
+ERROR - 2015-04-23 14:47:05.048; org.apache.solr.servlet.SolrDispatchFilter; Could not start Solr. Check solr/home property and the logs
+ERROR - 2015-04-23 14:47:05.068; org.apache.solr.common.SolrException; null:org.apache.solr.common.SolrException: org.apache.zookeeper.server.quorum.QuorumPeerConfig$ConfigException: Error processing D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\/zoo.cfg
+	at org.apache.solr.cloud.SolrZkServer.parseConfig(SolrZkServer.java:96)
+	at org.apache.solr.core.ZkContainer.initZooKeeper(ZkContainer.java:105)
+	at org.apache.solr.core.ZkContainer.initZooKeeper(ZkContainer.java:64)
+	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:242)
+	at org.apache.solr.servlet.SolrDispatchFilter.createCoreContainer(SolrDispatchFilter.java:182)
+	at org.apache.solr.servlet.SolrDispatchFilter.init(SolrDispatchFilter.java:129)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:719)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1252)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:710)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:494)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.deploy.bindings.StandardStarter.processBinding(StandardStarter.java:39)
+	at org.eclipse.jetty.deploy.AppLifeCycle.runBindings(AppLifeCycle.java:186)
+	at org.eclipse.jetty.deploy.DeploymentManager.requestAppGoal(DeploymentManager.java:494)
+	at org.eclipse.jetty.deploy.DeploymentManager.addApp(DeploymentManager.java:141)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider.fileAdded(ScanningAppProvider.java:145)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider$1.fileAdded(ScanningAppProvider.java:56)
+	at org.eclipse.jetty.util.Scanner.reportAddition(Scanner.java:609)
+	at org.eclipse.jetty.util.Scanner.reportDifferences(Scanner.java:540)
+	at org.eclipse.jetty.util.Scanner.scan(Scanner.java:403)
+	at org.eclipse.jetty.util.Scanner.doStart(Scanner.java:337)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider.doStart(ScanningAppProvider.java:121)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.deploy.DeploymentManager.startAppProvider(DeploymentManager.java:555)
+	at org.eclipse.jetty.deploy.DeploymentManager.doStart(DeploymentManager.java:230)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.util.component.AggregateLifeCycle.doStart(AggregateLifeCycle.java:81)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:58)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:96)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:280)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.xml.XmlConfiguration$1.run(XmlConfiguration.java:1259)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.jetty.start.Main.invokeMain(Main.java:473)
+	at org.eclipse.jetty.start.Main.start(Main.java:615)
+	at org.eclipse.jetty.start.Main.main(Main.java:96)
+Caused by: org.apache.zookeeper.server.quorum.QuorumPeerConfig$ConfigException: Error processing D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server\solr\/zoo.cfg
+	at org.apache.solr.cloud.SolrZkServerProps.getProperties(SolrZkServer.java:192)
+	at org.apache.solr.cloud.SolrZkServer.parseConfig(SolrZkServer.java:88)
+	... 44 more
+Caused by: java.lang.IllegalArgumentException: Malformed \uxxxx encoding.
+	at java.util.Properties.loadConvert(Properties.java:568)
+	at java.util.Properties.load0(Properties.java:391)
+	at java.util.Properties.load(Properties.java:317)
+	at org.apache.solr.cloud.SolrZkServerProps.getProperties(SolrZkServer.java:182)
+	... 45 more
+
+INFO  - 2015-04-23 14:47:05.078; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2015-04-23 14:47:05.098; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2015-04-23 14:48:58.169; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2015-04-23 14:48:58.169; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/D:/FCC_SOLR/FCC_BASELINE_P024616/u03/solr/solr-5.0.0/server/solr-webapp/webapp/},D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server/webapps/solr.war
+INFO  - 2015-04-23 14:48:59.169; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/D:/FCC_SOLR/FCC_BASELINE_P024616/u03/solr/solr-5.0.0/server/solr-webapp/webapp/},D:\FCC_SOLR\FCC_BASELINE_P024616\u03\solr\solr-5.0.0\server/webapps/solr.war
